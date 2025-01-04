@@ -19,6 +19,16 @@ android {
         }
     }
 }
+publishing {
+    publications {
+        release(MavenPublication) {
+            from components.release
+            groupId = 'com.github.Rabindra2000'
+            artifactId = 'volumeKey'
+            version = 'v1.0.1'
+        }
+    }
+}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
